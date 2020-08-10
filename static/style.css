@@ -8,6 +8,10 @@
 
 /* title */
 
+#logo{
+  width: 70%;
+  height: auto;
+}
 #logo path:nth-child(1) {
   stroke-dasharray: 216;
   stroke-dashoffset: 216;
