@@ -1,1 +1,1 @@
-web; gunicorn SpotToYTB.wsgi --log-file
+web; gunicorn SpotToYTB.wsgi --log-file -
