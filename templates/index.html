@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.0/dist/css/axentix.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.0.1/dist/css/neu-axentix.min.css" />
     <link rel="stylesheet" href="{% static "style.css" %}" />
+    <!-- <link rel="stylesheet" href="{% static "docs.css" %}" /> -->
     <script src="{% static "main.js" %}"></script>
 </head>
 
 <body class="layout neu-dark">
-    <main>
+    <main class="layout neu-dark">
         <!-- Code here the main content -->
 
         <!-- background -->
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
+
         <!-- background end -->
         <div class="container mycard">
             <div class="card rounded-3 neu-flat txt-center">
@@ -106,15 +105,24 @@
                                 d="M636.312 27.9688H616.594V44.0938H639.5V49H610.594V3.5H639.188V8.4375H616.594V23.0625H636.312V27.9688Z"
                                 stroke="white" stroke-width="4" mask="url(#path-1-outside-1)" />
                         </svg></br>
-                        <i class="fab fa-spotify txt-green"></i><i class="fas fa-arrows-alt-h px-5"></i><i
-                            class="fab fa-youtube txt-red"></i> </h1>
+                        <a href="https://open.spotify.com/" target="blank"><i
+                                class="fab fa-spotify txt-green"></a></i><i class="fas fa-arrows-alt-h px-5"></i><a
+                            href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube txt-red"></i></a>
+                    </h1>
+                    <p>PLAYLIST CONVERTER</p>
                 </div>
                 <div class="card-content">
                     <p>
-                        Lorem ipsum dolor sit amet c </br>
-                        veritatis excepturi natus impedt id</br>
-                        possimus quia, tempore fuga dolo</br>
-                        accusantium! Adipisci est nam </br>
+                        <div class="form-field">
+                            <label for="LINK">Paste The Spotify Playlist Link</label>
+                            <input type="url" id="LINK " data-neu-focus="neu-bordered" class="form-control neu-flat"
+                                placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" />
+                        </div>
+                    </p>
+                    <p>
+                        <div class="grix xs3 mb-5 ">
+                            <button data-neu-click="neu-pressed" class="btn neu-flat neu-small">Click me !</button>
+                        </div>
                     </p>
                 </div>
                 <div class="card-footer flex vcenter">
