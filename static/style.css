@@ -89,7 +89,7 @@
   animation: line-anim 2s ease forwards 1.5s;
 }
 #logo path:nth-child(17) {
-  stroke-dasharray: 25;
+  stroke-dasharray: 245;
   stroke-dashoffset: 245;
   animation: line-anim 2s ease forwards 2s;
 }
