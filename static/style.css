@@ -6,9 +6,22 @@
   transform: translate(-50%, -50%);
 }
 
+.btn {
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.loading{
+  z-index: 10;
+}
+
+.hidden {
+  visibility: hidden;
+}
 /* title */
 
-#logo{
+#logo {
   width: 80%;
   height: auto;
 }
@@ -103,6 +116,3 @@
     stroke-dashoffset: 0;
   }
 }
-
-
-

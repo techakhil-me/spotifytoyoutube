@@ -10,14 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.0/dist/css/axentix.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.0.1/dist/css/neu-axentix.min.css" />
+    <link rel="stylesheet" href="{% static "axentix.min.css" %}" />
+    <link rel="stylesheet" href="{% static "neu-axentix.min.css" %}" />
     <link rel="stylesheet" href="{% static "style.css" %}" />
+    <link rel="stylesheet" href="{% static "neumorph.css" %}" />
     <!-- <link rel="stylesheet" href="{% static "docs.css" %}" /> -->
     <script src="{% static "main.js" %}"></script>
 </head>
 
-<body class="layout neu-dark">
+<body class="layout neu-dark" onload="start()">
     <main class="layout neu-dark">
         <!-- Code here the main content -->
 
@@ -115,15 +116,22 @@
                     <p>
                         <div class="form-field">
                             <label for="LINK">Paste The Spotify Playlist Link</label>
-                            <input type="url" id="LINK " data-neu-focus="neu-bordered" class="form-control neu-flat"
+                            <input type="url" id="LINK " data-neu-focus="neu-bordered"
+                                class="form-control rounded-3 neu-flat"
                                 placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" />
                         </div>
                     </p>
-                    <p>
-                        <div class="grix xs3 mb-5 ">
-                            <button data-neu-click="neu-pressed" class="btn neu-flat neu-small">Click me !</button>
-                        </div>
-                    </p>
+                    <h1>
+
+                        <button data-neu-clicked="neu-pressed" id="submit" onclick="submit()"
+                            class="btn neu-flat neu-small rounded-3">Click me !</button><button
+                            class="btn neu-bordered neu-small rounded-3 hidden" id="loading">
+                            <span class="spinner-border spinner-border-sm Loading"></span>
+                            <span class="ml-1">Loading...</span>
+                        </button>
+
+
+                    </h1>
                 </div>
                 <div class="card-footer flex vcenter">
                     <span>Card footer</span>
