@@ -1,22 +1,20 @@
 # SpotifyToYoutube
 SpotifyToYoutube is a Python-Django webapp to convert spotify playlist to youtube playlist.
 
+check out the the page [SpotifyToYoutube][1]
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-pip install foobar
+git clone https://github.com/techakhilc47/spotifytoyoutube
 ```
 
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+python manage.py runserver
 ```
 
 ## Contributing
@@ -26,3 +24,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+[1] :http://techakhilc47.pythonanywhere.com/
