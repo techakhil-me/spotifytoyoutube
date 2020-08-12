@@ -18,7 +18,7 @@ python manage.py runserver
 ```
 
 ## Contributing
-Pull requests are welcome. Currently it supports conversion of just 50 songs, integration of YOUTB+UBE API under progress !
+Pull requests are welcome. Currently it supports conversion of just 50 songs, integration of YOUTBUBE API under progress !
 
 
 ## License
