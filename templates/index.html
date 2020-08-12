@@ -18,7 +18,7 @@
     <script src="{% static "main.js" %}"></script>
 </head>
 
-<body class="layout neu-dark" onload="start()">
+<body class="layout neu-dark">
     <main class="layout neu-dark">
         <!-- Code here the main content -->
 
@@ -113,28 +113,32 @@
                     <p>PLAYLIST CONVERTER</p>
                 </div>
                 <div class="card-content">
-                    <p>
-                        <div class="form-field">
+                    {% if link %}
+                    <a href="{{link}}" target="blank">
+                        <button data-neu-clicked="neu-pressed" class="btn neu-flat neu-small rounded-3">OPEN YOUTUBE<i class="fab fa-youtube txt-red pl-1"></i></button>
+                    </a>
+                    {% else %}
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-field pb-3">
                             <label for="LINK" class="py-2">Paste The Spotify Playlist Link</label>
                             <input type="url" id="LINK " data-neu-focus="neu-bordered"
-                                class="form-control rounded-3 neu-flat"
+                                class="form-control rounded-3 neu-flat" name="link"
                                 placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" />
                         </div>
-                    </p>
-                    <h1 class="py-5">
-
-                        <button data-neu-clicked="neu-pressed" id="submit" onclick="submit()"
+                        <button data-neu-clicked="neu-pressed" type="submit" id="submit"
+                            onclick="submit()"
                             class="btn neu-flat neu-small rounded-3">CONVERT</button><button
                             class="btn neu-bordered neu-small rounded-3 hidden" id="loading">
                             <span class="spinner-border spinner-border-sm Loading"></span>
                             <span class="ml-1">CONVERTING</span>
                         </button>
-
-
-                    </h1>
+                    </form>
+                    {% endif %}
                 </div>
                 <div class="card-footer flex mt-5">
-                    <span>By - TechAkhil</span> <span><a href="https://github.com/techakhilc47" target="blank" class="fab fa-github txt-gray px-2">
+                    <span>By - TechAkhil</span> <span><a href="https://github.com/techakhilc47/spotifytoyoutube" target="blank"
+                            class="fab fa-github txt-gray px-2">
                         </a></span>
                 </div>
             </div>
