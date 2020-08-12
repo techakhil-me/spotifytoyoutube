@@ -11,9 +11,14 @@
   transform: translate(-50%);
   position: absolute;
 }
-
-.loading{
-  z-index: 10;
+#submit{
+  z-index: 3  ;
+}
+#loading{
+  z-index: 2;
+}
+.neu-pressed{
+  visibility: hidden;
 }
 
 .hidden {
