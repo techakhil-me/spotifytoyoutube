@@ -118,7 +118,7 @@
                         <button data-neu-clicked="neu-pressed" class="btn neu-flat neu-small rounded-3">OPEN YOUTUBE<i class="fab fa-youtube txt-red pl-1"></i></button>
                     </a>
                     {% else %}
-                    <form method="post">
+                    <form action='getlink' method="post">
                         {% csrf_token %}
                         <div class="form-field pb-3">
                             <label for="LINK" class="py-2">Paste The Spotify Playlist Link</label>
@@ -127,7 +127,7 @@
                                 placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" />
                         </div>
                         <button data-neu-clicked="neu-pressed" type="submit" id="submit"
-                            onclick="submit()"
+                            onclick="submit();location.href='{%  url 'getlink' %}'"
                             class="btn neu-flat neu-small rounded-3">CONVERT</button><button
                             class="btn neu-bordered neu-small rounded-3 hidden" id="loading">
                             <span class="spinner-border spinner-border-sm Loading"></span>
