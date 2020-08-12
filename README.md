@@ -5,7 +5,7 @@ check out the the page [SpotifyToYoutube][1]
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use git clone to install it on local machine.
 
 ```bash
 git clone https://github.com/techakhilc47/spotifytoyoutube
@@ -18,10 +18,10 @@ python manage.py runserver
 ```
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. Currently it supports conversion of just 50 songs, integration of YOUTB+UBE API under progress !
 
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
 [1] :http://techakhilc47.pythonanywhere.com/
