@@ -8,8 +8,10 @@
     <link rel="icon" href="https://techakhilc47.github.io/background/final.png" type="image/x-icon">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" itemprop="description" content="Import Spotify playlists and favourites tracks, albums, and artists to YouTube in one go without any login or authentication - paste and go !" />
-    <meta name="keywords" content="techakhil, convert, convert playlists, transfer, syncing, smart links, free, apple music, streaming services, spotify, youtube" />
+    <meta name="description" itemprop="description"
+        content="Import Spotify playlists and favourites tracks, albums, and artists to YouTube in one go without any login or authentication - paste and go !" />
+    <meta name="keywords"
+        content="techakhil, convert, convert playlists, transfer, syncing, smart links, free, apple music, streaming services, spotify, youtube" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
     <link rel="stylesheet" href="{% static "axentix.min.css" %}" />
     <link rel="stylesheet" href="{% static "neu-axentix.min.css" %}" />
@@ -114,34 +116,40 @@
                     <p>PLAYLIST CONVERTER</p>
                 </div>
                 <div class="card-content">
-                    {% if link %}
+
+                    {% if link != "InvalidLink" and link %}
                     <a href="{{link}}" target="blank">
-                        <button data-neu-clicked="neu-pressed" class="btn neu-flat neu-small rounded-3">OPEN YOUTUBE<i class="fab fa-youtube txt-red pl-1"></i></button>
+                        <button data-neu-clicked="neu-pressed" class="btn neu-flat neu-small rounded-3">OPEN YOUTUBE<i
+                                class="fab fa-youtube txt-red pl-1"></i></button>
                     </a>
                     {% else %}
-                    <form action='getlink' method="post">
+                    {% if link == 'InvalidLink' %}
+                    <script>
+                        alert("INVALID LINK");
+                    </script>
+                    {% endif %}
+                    <form action='getlink' method="post" name='urlform' onsubmit="return check()">
                         {% csrf_token %}
                         <div class="form-field pb-3">
                             <label for="LINK" class="py-2">Paste The Spotify Playlist Link</label>
                             <input type="url" id="LINK " data-neu-focus="neu-bordered"
                                 class="form-control rounded-3 neu-flat" name="link"
-                                placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" />
+                                placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" required />
                         </div>
-                        <button data-neu-clicked="neu-pressed" type="submit" id="submit"
-                            onclick="submit();location.href='{%  url 'getlink' %}'"
-                            class="btn neu-flat neu-small rounded-3 px-5">-CONVERT-</button><button
+                        <button id="submit" type="submit"
+                            class="btn neu-flat neu-small rounded-3 px-5">-CONVERT-</button><span
                             class="btn neu-bordered neu-small rounded-3" id="loading">
                             <span class="spinner-border spinner-border-sm"></span>
                             <span class="ml-1">CONVERTING</span>
-                        </button>
+                        </span>
                         <p class="mt-4 pt-5">It will take about a minute, be patient :)</p>
                     </form>
-                    
+
                     {% endif %}
                 </div>
                 <div class="card-footer flex mt-5">
-                    <span>By - TechAkhil</span> <span><a href="https://github.com/techakhilc47/spotifytoyoutube" target="blank"
-                            class="fab fa-github txt-gray px-2"> 
+                    <span>By - TechAkhil</span> <span><a href="https://github.com/techakhilc47/spotifytoyoutube"
+                            target="blank" class="fab fa-github txt-gray px-2">
                         </a></span>
                 </div>
             </div>
