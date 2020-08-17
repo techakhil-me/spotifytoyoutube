@@ -11,6 +11,11 @@
   transform: translate(-50%);
   position: absolute;
 }
+#LINK{
+  color: white;
+
+}
+
 #submit{
   z-index: 3  ;
 }
