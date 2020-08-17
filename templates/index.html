@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static "neumorph.css" %}" />
     <!-- <link rel="stylesheet" href="{% static "docs.css" %}" /> -->
     <script src="{% static "main.js" %}"></script>
+
 </head>
 
 <body class="layout neu-dark">
@@ -132,7 +133,7 @@
                         {% csrf_token %}
                         <div class="form-field pb-3">
                             <label for="LINK" class="py-2">Paste The Spotify Playlist Link</label>
-                            <input type="url" id="LINK " data-neu-focus="neu-bordered"
+                            <input type="url" id="LINK" data-neu-focus="neu-bordered"
                                 class="form-control rounded-3 neu-flat" name="link"
                                 placeholder="https://open.spotify.com/playlist/47x5OmK99REox3oJb9thap#_=_" required />
                         </div>
