@@ -9,6 +9,7 @@ Use git clone to install it on local machine.
 
 ```bash
 git clone https://github.com/techakhilc47/spotifytoyoutube
+pip install -r requirements.txt
 ```
 
 ## Usage
