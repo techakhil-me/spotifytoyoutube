@@ -1,7 +1,7 @@
 # SpotifyToYoutube
 SpotifyToYoutube is a Python-Django webapp to convert spotify playlist to youtube playlist.
 
-check out the the page [SpotifyToYoutube](http://techakhilc47.pythonanywhere.com/)
+check out the the page [SpotifyToYoutube](https://SpotToYtb.techakhilc47.repl.co)
 
 ## Installation
 
